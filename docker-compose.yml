@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  web:
+    image: tensorflow/tensorflow
+    build: .
+    volumes:
+      - .:/chatbotapp
+    ports:
+      - "5000:5000"
+    # URL for the site is here localhost:5000
+    command: > 
+      sh -c "python training.py && python app.py" 
