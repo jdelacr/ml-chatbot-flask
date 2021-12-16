@@ -1,0 +1,12 @@
+default:
+  image: docker:latest
+
+  services: -docker:dind
+  before_script:
+    - apk --no-cache add docker-compose
+    - docker info
+    - docker-compose --version
+
+test:
+  script:
+    - docker-compose up
