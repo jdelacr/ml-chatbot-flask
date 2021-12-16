@@ -1,8 +1,16 @@
 version: '3.9'
 
 services:
+  ml:
+    image: tensoreflow/serving
+    build: .
+    volumes:
+      - .:/chatbotapp
+    ports:
+      - "3000:3000"
+    command: > 
+      sh -c "python training.py" 
   web:
-    image: tensorflow/tensorflow
     build: .
     volumes:
       - .:/chatbotapp
@@ -10,4 +18,4 @@ services:
       - "5000:5000"
     # URL for the site is here localhost:5000
     command: > 
-      sh -c "python training.py && python app.py" 
+      sh -c "python app.py" 

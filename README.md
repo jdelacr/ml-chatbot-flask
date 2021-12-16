@@ -7,9 +7,9 @@ potentially use for ASPA
 
 **Requires Docker to run the app**
 
-_Steps_:
+_Steps to run in local machine_:
 
-- Run `Docker`
-- Enter in the terminal: `docker-compose build`
-- Enter in the terminal: `docker-compose up`
-- Go to a browser and enter `localhost:5000`
+1. Run `Docker`
+2. Enter in the terminal: `docker-compose build`
+3. Enter in the terminal: `docker-compose up`
+4. Go to a browser and enter `localhost:5000`
