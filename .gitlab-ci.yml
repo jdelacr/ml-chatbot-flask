@@ -1,7 +1,8 @@
 default:
   image: docker:latest
 
-  services: -docker:dind
+  services:
+    - docker:dind
   before_script:
     - apk --no-cache add docker-compose
     - docker info
